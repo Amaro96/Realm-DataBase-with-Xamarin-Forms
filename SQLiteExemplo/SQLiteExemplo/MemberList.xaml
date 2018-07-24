@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SQLiteExemplo.MemberList">
+    <ContentPage.Content>
+       
+        <ListView x:Name="listMembers" ItemTapped="OnSelect">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Spacing="2"
+                                     HorizontalOptions="Center">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Name"
+                                       FontSize="16"></Label>
+                                <Label x:Name="firsName"
+                                       Text="{Binding Name}"
+                                       FontSize="16"
+                                       TextColor="Red"></Label>
+                                
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Age"
+                                       FontSize="16"></Label>
+                                <Label x:Name="middleName"
+                                       Text="{Binding Age}"
+                                       FontSize="16"
+                                       TextColor="Red"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
